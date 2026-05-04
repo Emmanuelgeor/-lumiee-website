@@ -696,8 +696,14 @@
       <p class="lead">Lumiee is a friendly AI chatbot that recommends age-appropriate books and videos, helps kids
         discover new interests, and gives parents powerful safety controls.</p>
       <div class="cta">
-        <a class="btn primary" href="YOUR_IOS_APP_STORE_LINK"> Download for iOS</a>
-        <a class="btn blue" href="YOUR_ANDROID_PLAY_STORE_LINK">▶ Download for Android</a>
+        <a class="btn primary" href="#" onclick="showIosMessage(event)">
+           Download for iOS
+        </a>
+        <a class="btn blue"
+          href="https://expo.dev/accounts/emmanuelgeor/projects/Lumiee/builds/8b0d327e-3475-4549-b99d-75210688782a"
+          target="_blank">
+          ▶ Download for Android
+        </a><a class="btn blue" href="YOUR_ANDROID_PLAY_STORE_LINK">▶ Download for Android</a>
       </div>
       <div class="trust"><span>🛡️ Parent PIN</span><span>👶 Child Profiles</span><span>📚 Smart Recommendations</span>
       </div>
@@ -897,6 +903,11 @@
 
       const message = input.value.trim();
       if (!message) return;
+
+      function showIosMessage(event) {
+        event.preventDefault();
+        alert("iOS version is under development. Coming soon!");
+      }
 
       chatBox.innerHTML += `<div style="text-align:right;margin:10px 0;"><b>You:</b> ${message}</div>`;
       input.value = "";
