@@ -4,33 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Lumiee — Safe AI Book & Video Recommendations for Kids</title>
   <link rel="icon" type="image/jpeg" href="lumiee-app-icon.jpeg">
   <link rel="apple-touch-icon" href="lumiee-app-icon.jpeg">
-
   <meta name="description"
     content="Lumiee is a safe AI chatbot that recommends books and videos for kids with parental controls, safety alerts, favorites, reviews, and smart discovery." />
-
   <style>
     :root {
       --orange: #ff8a00;
+      --yellow: #ffd84d;
       --blue: #1677ff;
       --cyan: #36d7ff;
+      --purple: #7b4dff;
       --ink: #172033;
       --muted: #64708a;
-      --glass: rgba(255, 255, 255, .78);
+      --card: #ffffffcc;
+      --glass: rgba(255, 255, 255, .72);
       --shadow: 0 24px 70px rgba(23, 32, 51, .18);
       --radius: 30px;
     }
 
     * {
-      box-sizing: border-box;
+      box-sizing: border-box
     }
 
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--ink);
       overflow-x: hidden;
       background:
@@ -42,13 +42,55 @@
 
     a {
       color: inherit;
-      text-decoration: none;
+      text-decoration: none
+    }
+
+    .bg-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(20px);
+      opacity: .45;
+      z-index: -1;
+      animation: float 8s ease-in-out infinite
+    }
+
+    .orb1 {
+      width: 220px;
+      height: 220px;
+      background: var(--orange);
+      left: -70px;
+      top: 120px
+    }
+
+    .orb2 {
+      width: 270px;
+      height: 270px;
+      background: var(--cyan);
+      right: -80px;
+      top: 260px;
+      animation-delay: 1s
+    }
+
+    .orb3 {
+      width: 200px;
+      height: 200px;
+      background: var(--purple);
+      left: 35%;
+      bottom: -80px;
+      animation-delay: 2s
+    }
+
+    @keyframes float {
+      50% {
+        transform: translateY(-28px) translateX(18px) scale(1.06)
+      }
     }
 
     nav {
       width: min(1160px, 92%);
       margin: 20px auto 0;
       padding: 14px 18px;
+      border: 1px solid rgba(255, 255, 255, .7);
       border-radius: 999px;
       display: flex;
       align-items: center;
@@ -66,13 +108,13 @@
       align-items: center;
       gap: 11px;
       font-weight: 900;
-      font-size: 24px;
+      font-size: 22px
     }
 
     .brand img {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px
     }
 
     .navlinks {
@@ -84,7 +126,7 @@
     }
 
     .navlinks a {
-      transition: .25s;
+      transition: 0.25s;
     }
 
     .navlinks a:hover {
@@ -102,29 +144,29 @@
       font-weight: 900;
       border: 0;
       cursor: pointer;
-      transition: .25s;
+      transition: .25s transform, .25s box-shadow;
       background: #fff;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .08)
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 18px 35px rgba(0, 0, 0, .14);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, .14)
     }
 
     .primary {
       background: linear-gradient(135deg, var(--orange), #ff4da6);
-      color: white;
+      color: white
     }
 
     .blue {
       background: linear-gradient(135deg, var(--blue), var(--cyan));
-      color: white;
+      color: white
     }
 
     section {
       width: min(1160px, 92%);
-      margin: 0 auto;
+      margin: 0 auto
     }
 
     .hero {
@@ -133,44 +175,46 @@
       grid-template-columns: 1.05fr .95fr;
       gap: 44px;
       align-items: center;
-      padding: 70px 0 40px;
+      padding: 70px 0 40px
     }
 
     .badge {
       width: max-content;
       padding: 10px 16px;
       border-radius: 999px;
-      background: #fff9;
+      background: #fff7;
+      border: 1px solid #fff;
       font-weight: 900;
       color: #764500;
       box-shadow: 0 10px 22px rgba(255, 138, 0, .13);
+      animation: pop .8s ease both;
     }
 
     h1 {
       font-size: clamp(44px, 7vw, 86px);
       line-height: .94;
       margin: 22px 0 18px;
-      letter-spacing: -3px;
+      letter-spacing: -3px
     }
 
     .gradient {
       background: linear-gradient(135deg, #ff8a00, #ff3d81, #1677ff);
       -webkit-background-clip: text;
-      color: transparent;
+      color: transparent
     }
 
     .lead {
       font-size: 21px;
       line-height: 1.65;
       color: var(--muted);
-      max-width: 640px;
+      max-width: 640px
     }
 
     .cta {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 30px;
+      margin-top: 30px
     }
 
     .trust {
@@ -179,13 +223,14 @@
       flex-wrap: wrap;
       margin-top: 28px;
       color: #526079;
-      font-weight: 800;
+      font-weight: 800
     }
 
     .trust span {
       background: #fff9;
       padding: 10px 14px;
       border-radius: 999px;
+      border: 1px solid #fff
     }
 
     .phone-stage {
@@ -193,20 +238,40 @@
       min-height: 620px;
       display: grid;
       place-items: center;
+      perspective: 1000px
+    }
+
+    .halo {
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: conic-gradient(from 180deg, #ff8a00, #36d7ff, #7b4dff, #ff8a00);
+      filter: blur(18px);
+      opacity: .25;
+      animation: spin 9s linear infinite
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
     }
 
     .app-card {
       width: min(430px, 90vw);
       background: linear-gradient(180deg, #fff, #fff8);
+      border: 1px solid #fff;
       padding: 22px;
       border-radius: 44px;
       box-shadow: var(--shadow);
+      transform: rotateY(-8deg) rotateX(4deg);
       animation: floatCard 5s ease-in-out infinite;
     }
 
     @keyframes floatCard {
       50% {
-        transform: translateY(-18px);
+        transform: rotateY(8deg) rotateX(2deg) translateY(-18px)
       }
     }
 
@@ -214,10 +279,31 @@
       width: 100%;
       border-radius: 34px;
       display: block;
-      box-shadow: 0 22px 55px rgba(255, 138, 0, .25);
+      box-shadow: 0 22px 55px rgba(255, 138, 0, .25)
     }
 
-    .chat-bubble,
+    .chat-bubble {
+      position: absolute;
+      right: 20px;
+      top: 92px;
+      width: 230px;
+      background: #fff;
+      padding: 18px;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      font-weight: 900;
+      animation: wiggle 4s ease-in-out infinite;
+    }
+
+    .chat-bubble:after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 32px;
+      border: 12px solid transparent;
+      border-top-color: #fff
+    }
+
     .mini {
       position: absolute;
       background: #fff;
@@ -225,64 +311,67 @@
       padding: 14px 16px;
       box-shadow: var(--shadow);
       font-weight: 900;
-    }
-
-    .chat-bubble {
-      right: 20px;
-      top: 92px;
-      width: 230px;
+      animation: bob 3.8s ease-in-out infinite
     }
 
     .m1 {
       left: 10px;
-      bottom: 130px;
+      bottom: 130px
     }
 
     .m2 {
       right: 18px;
       bottom: 45px;
+      animation-delay: 1s
     }
 
     .m3 {
       left: 60px;
       top: 70px;
+      animation-delay: 2s
     }
 
-    h2 {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1;
-      margin: 0 0 16px;
-      letter-spacing: -2px;
-      text-align: center;
+    @keyframes bob {
+      50% {
+        transform: translateY(-15px)
+      }
     }
 
-    .section-lead {
-      text-align: center;
-      color: var(--muted);
-      font-size: 19px;
-      max-width: 760px;
-      margin: 0 auto 28px;
-      line-height: 1.6;
+    @keyframes wiggle {
+      50% {
+        transform: rotate(2deg) translateY(-10px)
+      }
+    }
+
+    @keyframes pop {
+      from {
+        opacity: 0;
+        transform: translateY(12px)
+      }
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
-      margin: 40px 0 80px;
+      margin: 40px 0 80px
     }
 
     .card {
-      background: #ffffffcc;
+      background: var(--card);
+      border: 1px solid #fff;
       border-radius: var(--radius);
       padding: 28px;
       box-shadow: 0 18px 45px rgba(23, 32, 51, .08);
-      transition: .25s;
+      backdrop-filter: blur(14px);
+      transition: .25s transform, .25s box-shadow;
+      position: relative;
+      overflow: hidden
     }
 
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow)
     }
 
     .icon {
@@ -292,18 +381,40 @@
       display: grid;
       place-items: center;
       font-size: 28px;
-      background: linear-gradient(135deg, #fff2b8, #ffd1e7);
+      background: linear-gradient(135deg, #fff2b8, #ffd1e7)
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1;
+      margin: 0 0 16px;
+      letter-spacing: -2px;
+      text-align: center
+    }
+
+    .section-lead {
+      text-align: center;
+      color: var(--muted);
+      font-size: 19px;
+      max-width: 760px;
+      margin: 0 auto 28px;
+      line-height: 1.6
     }
 
     h3 {
       font-size: 23px;
-      margin: 18px 0 10px;
+      margin: 18px 0 10px
     }
 
-    p,
-    li {
+    p {
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.65
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #56627b;
+      line-height: 1.9
     }
 
     .feature-band {
@@ -317,16 +428,18 @@
       color: white;
       box-shadow: var(--shadow);
       margin-bottom: 80px;
-    }
-
-    .feature-band h2 {
-      text-align: left;
-      color: white;
+      overflow: hidden;
+      position: relative
     }
 
     .feature-band p,
     .feature-band li {
-      color: #d9e6ff;
+      color: #d9e6ff
+    }
+
+    .feature-band h2 {
+      text-align: left;
+      color: white
     }
 
     .safety {
@@ -334,20 +447,21 @@
       border-radius: 42px;
       padding: 46px;
       box-shadow: var(--shadow);
-      margin-bottom: 80px;
+      margin-bottom: 80px
     }
 
     .timeline {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
-      margin-top: 30px;
+      margin-top: 30px
     }
 
     .step {
       background: #fff;
       border-radius: 26px;
       padding: 22px;
+      border: 1px solid #eef3ff
     }
 
     .num {
@@ -358,110 +472,57 @@
       color: white;
       display: grid;
       place-items: center;
-      font-weight: 900;
+      font-weight: 900
     }
 
     .download {
       text-align: center;
       padding: 70px 22px 90px;
       border-radius: 46px;
-      margin: 60px auto;
+      margin: 20px auto 60px;
       background: linear-gradient(135deg, #ff8a00, #ff4da6 50%, #1677ff);
       color: white;
       box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden
     }
 
     .download h2,
     .download p {
-      color: white;
+      color: white
     }
 
-    .store-buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
-      margin-top: 34px;
-    }
-
-    .store-btn {
-      width: 230px;
-      height: 76px;
-      background: #111;
-      color: white;
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, .22);
-      transition: .25s ease;
-    }
-
-    .store-btn:hover {
-      transform: translateY(-5px) scale(1.03);
-    }
-
-    .store-icon {
-      font-size: 34px;
-    }
-
-    .store-btn small {
-      display: block;
-      font-size: 12px;
-      opacity: .8;
-    }
-
-    .store-btn strong {
-      display: block;
-      font-size: 22px;
-    }
-
-    .qr-box {
-      margin: 34px auto 0;
-      background: rgba(255, 255, 255, .18);
-      width: 210px;
-      padding: 16px;
-      border-radius: 24px;
-    }
-
-    .qr-box p {
-      color: white;
-      font-weight: 900;
-      margin: 0 0 12px;
-    }
-
-    .qr-box img {
-      width: 150px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 14px;
-      background: white;
-      padding: 8px;
+    .download .btn {
+      min-width: 210px
     }
 
     footer {
       text-align: center;
       color: #6a748b;
-      padding: 40px 0 55px;
+      padding: 40px 0 55px
     }
 
     .reveal {
       opacity: 0;
       transform: translateY(32px);
-      transition: .8s ease;
+      transition: .8s ease
     }
 
     .reveal.show {
       opacity: 1;
-      transform: none;
+      transform: none
     }
 
     @media(max-width:900px) {
-      nav {
-        border-radius: 36px;
-        align-items: flex-start;
+
+      .hero,
+      .feature-band {
+        grid-template-columns: 1fr
+      }
+
+      .grid,
+      .timeline {
+        grid-template-columns: 1fr
       }
 
       .navlinks {
@@ -480,43 +541,144 @@
         box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
       }
 
-      .hero,
-      .feature-band {
-        grid-template-columns: 1fr;
-      }
-
       .hero {
         padding-top: 130px;
       }
 
-      .grid,
-      .timeline {
-        grid-template-columns: 1fr;
-      }
-
       .chat-bubble,
       .mini {
-        display: none;
+        display: none
       }
 
-      h1 {
-        font-size: 50px;
+      .store-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 25px;
       }
 
-      .lead {
+      .store-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: black;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 16px;
+        text-decoration: none;
+        font-weight: 700;
+        min-width: 200px;
+        transition: 0.3s;
+      }
+
+      .store-btn small {
+        font-size: 11px;
+        opacity: 0.7;
+      }
+
+      .store-btn div div {
+        font-size: 18px;
+        font-weight: 900;
+      }
+
+      .store-btn .icon {
+        font-size: 24px;
+      }
+
+      .store-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .android {
+        background: #34a853;
+      }
+
+      .ios {
+        background: #000;
+      }
+
+      .store-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+        flex-wrap: wrap;
+        margin-top: 34px;
+      }
+
+      .store-btn {
+        width: 230px;
+        height: 76px;
+        background: #111;
+        color: white;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, .22);
+        transition: .25s ease;
+      }
+
+      .store-btn:hover {
+        transform: translateY(-5px) scale(1.03);
+      }
+
+      .store-icon {
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .store-btn small {
+        display: block;
+        font-size: 12px;
+        line-height: 1;
+        opacity: .8;
+      }
+
+      .store-btn strong {
+        display: block;
         font-size: 22px;
+        line-height: 1.15;
+      }
+
+      .qr-box {
+        margin: 34px auto 0;
+        background: rgba(255, 255, 255, .18);
+        border: 1px solid rgba(255, 255, 255, .35);
+        width: 210px;
+        padding: 16px;
+        border-radius: 24px;
+        backdrop-filter: blur(12px);
+      }
+
+      .qr-box p {
+        color: white;
+        font-weight: 900;
+        margin: 0 0 12px;
+      }
+
+      .qr-box img {
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 14px;
+        background: white;
+        padding: 8px;
       }
     }
   </style>
 </head>
 
 <body>
-  <nav>
-    <a class="brand" href="#">
-      <img src="lumiee-app-icon.jpeg" alt="Lumiee app icon">
-      Lumiee
-    </a>
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <div class="bg-orb orb3"></div>
 
+  <nav>
+    <a class="brand" href="#"><img src="lumiee-app-icon.jpeg" alt="Lumiee app icon"> Lumiee</a>
     <div class="navlinks">
       <a href="#features">Features</a>
       <a href="#safety">Safety</a>
@@ -524,46 +686,29 @@
       <a href="#try">Try Lumiee</a>
       <a href="#download">Download</a>
     </div>
-
     <a class="btn primary" href="#download">Get the App</a>
   </nav>
 
   <section class="hero">
     <div>
       <div class="badge">✨ Safe AI discovery for curious kids</div>
-
       <h1>Books & videos your child will <span class="gradient">love learning from.</span></h1>
-
-      <p class="lead">
-        Lumiee is a friendly AI chatbot that recommends age-appropriate books and videos,
-        helps kids discover new interests, and gives parents powerful safety controls.
-      </p>
-
+      <p class="lead">Lumiee is a friendly AI chatbot that recommends age-appropriate books and videos, helps kids
+        discover new interests, and gives parents powerful safety controls.</p>
       <div class="cta">
-        <a class="btn primary" href="#" onclick="showIosMessage(event)"> Download for iOS</a>
-
-        <a class="btn blue"
-          href="https://expo.dev/accounts/emmanuelgeor/projects/Lumiee/builds/8b0d327e-3475-4549-b99d-75210688782a"
-          target="_blank">
-          ▶ Download for Android
-        </a>
+        <a class="btn primary" href="YOUR_IOS_APP_STORE_LINK"> Download for iOS</a>
+        <a class="btn blue" href="YOUR_ANDROID_PLAY_STORE_LINK">▶ Download for Android</a>
       </div>
-
-      <div class="trust">
-        <span>🛡️ Parent PIN</span>
-        <span>👶 Child Profiles</span>
-        <span>📚 Smart Recommendations</span>
+      <div class="trust"><span>🛡️ Parent PIN</span><span>👶 Child Profiles</span><span>📚 Smart Recommendations</span>
       </div>
     </div>
-
     <div class="phone-stage">
+      <div class="halo"></div>
       <div class="chat-bubble">“Hi! Want a fun space book today?”</div>
       <div class="mini m1">📖 Books</div>
       <div class="mini m2">🎬 Videos</div>
       <div class="mini m3">🎙️ Voice chat</div>
-      <div class="app-card">
-        <img src="lumiee-app-icon.jpeg" alt="Lumiee mascot">
-      </div>
+      <div class="app-card"><img src="lumiee-app-icon.jpeg" alt="Lumiee chatbot mascot reading a book"></div>
     </div>
   </section>
 
@@ -572,13 +717,13 @@
     <p class="section-lead">Ask Lumiee for books or videos!</p>
 
     <div id="chatBox"
-      style="max-width:700px;margin:20px auto;background:#fff;padding:24px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,0.1);height:340px;overflow-y:auto;">
-      <div>Hi! I’m Lumiee 👋 Ask me something like “space books” 🚀</div>
+      style="max-width:600px;margin:20px auto;background:#fff;padding:20px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);height:300px;overflow-y:auto;">
+      <div class="bot-msg">Hi! I’m Lumiee 👋 Ask me something like “space books” 🚀</div>
     </div>
 
-    <div style="display:flex;justify-content:center;gap:10px;margin-top:15px;flex-wrap:wrap;">
+    <div style="display:flex;justify-content:center;gap:10px;margin-top:15px;">
       <input id="chatInput" type="text" placeholder="Ask Lumiee..."
-        style="padding:14px;border-radius:14px;border:1px solid #ddd;width:min(500px,90%);font-size:16px;">
+        style="padding:12px;border-radius:10px;border:1px solid #ddd;width:300px;">
       <button onclick="sendDemoMessage()" class="btn primary">Send</button>
     </div>
   </section>
@@ -588,20 +733,20 @@
     <p class="section-lead">Download Lumiee and turn screen time into smart, safe, and joyful learning time.</p>
 
     <div class="store-buttons">
-      <a href="#" onclick="showIosMessage(event)" class="store-btn">
+      <a href="YOUR_IOS_APP_STORE_LINK" class="store-btn">
         <span class="store-icon"></span>
         <span>
-          <small>Coming soon on</small>
+          <small>Download on the</small>
           <strong>App Store</strong>
         </span>
       </a>
 
       <a href="https://expo.dev/accounts/emmanuelgeor/projects/Lumiee/builds/8b0d327e-3475-4549-b99d-75210688782a"
-        target="_blank" class="store-btn">
+        class="store-btn">
         <span class="store-icon">▶</span>
         <span>
-          <small>Download for</small>
-          <strong>Android</strong>
+          <small>Get it on</small>
+          <strong>Google Play</strong>
         </span>
       </a>
     </div>
@@ -616,7 +761,6 @@
     <h2>Built for wonder. Designed for safety.</h2>
     <p class="section-lead">A modern learning ecosystem combining AI recommendations, kid-friendly discovery, parental
       monitoring, and scalable content management.</p>
-
     <div class="grid">
       <div class="card">
         <div class="icon">🧠</div>
@@ -639,17 +783,17 @@
       <div class="card">
         <div class="icon">🎙️</div>
         <h3>Voice-to-Text</h3>
-        <p>Younger users can speak naturally to Lumiee, making discovery easier and faster.</p>
+        <p>Younger users can speak naturally to Lumiee, making discovery easier, faster, and more accessible.</p>
       </div>
       <div class="card">
         <div class="icon">⭐</div>
         <h3>Favorites & Reviews</h3>
-        <p>Kids can like, dislike, save favorites, rate content, and share feedback.</p>
+        <p>Kids can like, dislike, save favorites, rate content, and share feedback to improve recommendations.</p>
       </div>
       <div class="card">
         <div class="icon">⚡</div>
         <h3>Fast Sync</h3>
-        <p>Firebase, Firestore, caching, and real-time updates keep the experience smooth.</p>
+        <p>Firebase, Firestore, AsyncStorage caching, and real-time updates keep the experience smooth and reliable.</p>
       </div>
     </div>
   </section>
@@ -658,26 +802,26 @@
     <div>
       <h2>Real-time safety monitoring parents can trust.</h2>
       <p>Lumiee detects unsafe searches, flags harmful keywords, logs alerts, and sends parent notifications with safer
-        alternatives.</p>
+        alternatives and helpful parenting suggestions.</p>
       <ul>
-        <li>Parent PIN protection and Parent Mode</li>
-        <li>Unsafe keyword detection</li>
-        <li>Alerts dashboard</li>
-        <li>Admin-managed moderation</li>
+        <li>Parent PIN protection and separate Parent Mode</li>
+        <li>Unsafe keyword detection and alert dashboard</li>
+        <li>AI-generated safe alternatives and guidance</li>
+        <li>Admin-managed moderation and content reporting</li>
       </ul>
     </div>
-
     <div class="card">
       <div class="icon">🛡️</div>
       <h3>Safety Dashboard</h3>
-      <p>Parents can review flagged searches, keywords, safe recommendations, reports, and support status.</p>
+      <p>Parents can review flagged searches, keywords, safe recommendations, reports, and support status from one clear
+        dashboard.</p>
     </div>
   </section>
 
   <section id="parents" class="safety reveal">
     <h2>Simple for kids. Powerful for parents.</h2>
-    <p class="section-lead">Lumiee gives families playful discovery for children and strong oversight for parents.</p>
-
+    <p class="section-lead">Lumiee gives families a balanced experience: playful discovery for children and strong
+      oversight for parents.</p>
     <div class="timeline">
       <div class="step">
         <div class="num">1</div>
@@ -702,71 +846,100 @@
     </div>
   </section>
 
+  <section class="reveal">
+    <h2>Everything your app needs to grow.</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Content Management</h3>
+        <p>Firestore content storage, categories, tags, metadata, filtering, and admin moderation.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🚩</div>
+        <h3>Reporting Workflow</h3>
+        <p>Parents can report content with reasons while admins review details, likes, dislikes, and actions.</p>
+      </div>
+      <div class="card">
+        <div class="icon">❓</div>
+        <h3>Support System</h3>
+        <p>FAQ, Contact Us, Report a Problem, admin answers, and pending-to-resolved status tracking.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💳</div>
+        <h3>Subscriptions</h3>
+        <p>7-day free trial, monthly plan, yearly discounted plan, and onboarding plan selection.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔐</div>
+        <h3>Secure Accounts</h3>
+        <p>Firebase Auth, user-specific data isolation, and admin-only access for sensitive collections.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>Clean Settings</h3>
+        <p>Account, profiles, subscription management, help, support, and FAQ in one polished area.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
   <footer>© <span id="year"></span> Lumiee. Safe AI-powered learning for kids.</footer>
 
   <script>
-    const CHAT_DEMO_URL = "https://chat-demo-45t5zbvv3q-as.a.run.app";
-
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    function showIosMessage(event) {
-      event.preventDefault();
-      alert("iOS version is under development. Coming soon!");
-    }
+    const CHAT_DEMO_URL = "https://chat-demo-45t5zbvv3q-as.a.run.app";
 
     async function sendDemoMessage() {
       const input = document.getElementById("chatInput");
       const chatBox = document.getElementById("chatBox");
-      const message = input.value.trim();
 
+      const message = input.value.trim();
       if (!message) return;
 
       chatBox.innerHTML += `<div style="text-align:right;margin:10px 0;"><b>You:</b> ${message}</div>`;
       input.value = "";
 
-      try {
-        const res = await fetch(CHAT_DEMO_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message, mode: "either" })
+      const res = await fetch(CHAT_DEMO_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          message,
+          mode: "either"
+        })
+      });
+
+      const data = await res.json();
+
+      chatBox.innerHTML += `
+    <div style="margin:10px 0;"><b>Lumiee:</b> ${data.reply}</div>
+  `;
+
+      if (data.recommendations) {
+        data.recommendations.forEach(item => {
+          chatBox.innerHTML += `
+        <div style="background:#f9f9f9;padding:10px;border-radius:10px;margin:8px 0;">
+          📌 <b>${item.title}</b>
+        </div>
+      `;
         });
-
-        const data = await res.json();
-
-        chatBox.innerHTML += `<div style="margin:10px 0;"><b>Lumiee:</b> ${data.reply || "Sorry, I could not answer right now."}</div>`;
-
-        if (data.recommendations) {
-          data.recommendations.forEach(item => {
-            chatBox.innerHTML += `
-              <div style="background:#f9f9f9;padding:10px;border-radius:10px;margin:8px 0;">
-                📌 <b>${item.title || "Recommended content"}</b>
-              </div>
-            `;
-          });
-        }
-      } catch (error) {
-        chatBox.innerHTML += `<div style="margin:10px 0;"><b>Lumiee:</b> Chat demo is unavailable right now.</div>`;
       }
 
       chatBox.scrollTop = chatBox.scrollHeight;
     }
-
     const reveals = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add("show");
-      });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("show"); });
     }, { threshold: .12 });
-
     reveals.forEach(el => io.observe(el));
 
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener("click", e => {
         const target = document.querySelector(a.getAttribute("href"));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: "smooth" });
-        }
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth" }); }
       });
     });
   </script>
