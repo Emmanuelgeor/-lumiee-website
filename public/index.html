@@ -7,12 +7,11 @@
   <title>Lumiee — Safe AI Book & Video Recommendations for Kids</title>
   <link rel="icon" type="image/jpeg" href="lumiee-app-icon.jpeg">
   <link rel="apple-touch-icon" href="lumiee-app-icon.jpeg">
-  <meta name="description"
-    content="Lumiee is a safe AI chatbot that recommends books and videos for kids with parental controls, safety alerts, favorites, reviews, and smart discovery." />
+  <meta name="description" content="Lumiee is a safe AI chatbot that recommends books and videos for kids." />
+
   <style>
     :root {
       --orange: #ff8a00;
-      --yellow: #ffd84d;
       --blue: #1677ff;
       --cyan: #36d7ff;
       --purple: #7b4dff;
@@ -25,12 +24,12 @@
     }
 
     * {
-      box-sizing: border-box
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--ink);
       overflow-x: hidden;
       background:
@@ -42,7 +41,7 @@
 
     a {
       color: inherit;
-      text-decoration: none
+      text-decoration: none;
     }
 
     .bg-orb {
@@ -51,7 +50,7 @@
       filter: blur(20px);
       opacity: .45;
       z-index: -1;
-      animation: float 8s ease-in-out infinite
+      animation: float 8s ease-in-out infinite;
     }
 
     .orb1 {
@@ -59,7 +58,7 @@
       height: 220px;
       background: var(--orange);
       left: -70px;
-      top: 120px
+      top: 120px;
     }
 
     .orb2 {
@@ -68,7 +67,7 @@
       background: var(--cyan);
       right: -80px;
       top: 260px;
-      animation-delay: 1s
+      animation-delay: 1s;
     }
 
     .orb3 {
@@ -77,12 +76,12 @@
       background: var(--purple);
       left: 35%;
       bottom: -80px;
-      animation-delay: 2s
+      animation-delay: 2s;
     }
 
     @keyframes float {
       50% {
-        transform: translateY(-28px) translateX(18px) scale(1.06)
+        transform: translateY(-28px) translateX(18px) scale(1.06);
       }
     }
 
@@ -108,13 +107,13 @@
       align-items: center;
       gap: 11px;
       font-weight: 900;
-      font-size: 22px
+      font-size: 22px;
     }
 
     .brand img {
       width: 42px;
       height: 42px;
-      border-radius: 12px
+      border-radius: 12px;
     }
 
     .navlinks {
@@ -123,10 +122,6 @@
       color: #44506a;
       font-weight: 900;
       font-size: 19px;
-    }
-
-    .navlinks a {
-      transition: 0.25s;
     }
 
     .navlinks a:hover {
@@ -146,27 +141,27 @@
       cursor: pointer;
       transition: .25s transform, .25s box-shadow;
       background: #fff;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, .08)
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 18px 35px rgba(0, 0, 0, .14)
+      box-shadow: 0 18px 35px rgba(0, 0, 0, .14);
     }
 
     .primary {
       background: linear-gradient(135deg, var(--orange), #ff4da6);
-      color: white
+      color: white;
     }
 
     .blue {
       background: linear-gradient(135deg, var(--blue), var(--cyan));
-      color: white
+      color: white;
     }
 
     section {
       width: min(1160px, 92%);
-      margin: 0 auto
+      margin: 0 auto;
     }
 
     .hero {
@@ -175,7 +170,7 @@
       grid-template-columns: 1.05fr .95fr;
       gap: 44px;
       align-items: center;
-      padding: 70px 0 40px
+      padding: 70px 0 40px;
     }
 
     .badge {
@@ -187,34 +182,33 @@
       font-weight: 900;
       color: #764500;
       box-shadow: 0 10px 22px rgba(255, 138, 0, .13);
-      animation: pop .8s ease both;
     }
 
     h1 {
       font-size: clamp(44px, 7vw, 86px);
       line-height: .94;
       margin: 22px 0 18px;
-      letter-spacing: -3px
+      letter-spacing: -3px;
     }
 
     .gradient {
       background: linear-gradient(135deg, #ff8a00, #ff3d81, #1677ff);
       -webkit-background-clip: text;
-      color: transparent
+      color: transparent;
     }
 
     .lead {
       font-size: 21px;
       line-height: 1.65;
       color: var(--muted);
-      max-width: 640px
+      max-width: 640px;
     }
 
     .cta {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 30px
+      margin-top: 30px;
     }
 
     .trust {
@@ -223,14 +217,14 @@
       flex-wrap: wrap;
       margin-top: 28px;
       color: #526079;
-      font-weight: 800
+      font-weight: 800;
     }
 
     .trust span {
       background: #fff9;
       padding: 10px 14px;
       border-radius: 999px;
-      border: 1px solid #fff
+      border: 1px solid #fff;
     }
 
     .phone-stage {
@@ -238,7 +232,7 @@
       min-height: 620px;
       display: grid;
       place-items: center;
-      perspective: 1000px
+      perspective: 1000px;
     }
 
     .halo {
@@ -249,12 +243,12 @@
       background: conic-gradient(from 180deg, #ff8a00, #36d7ff, #7b4dff, #ff8a00);
       filter: blur(18px);
       opacity: .25;
-      animation: spin 9s linear infinite
+      animation: spin 9s linear infinite;
     }
 
     @keyframes spin {
       to {
-        transform: rotate(360deg)
+        transform: rotate(360deg);
       }
     }
 
@@ -271,7 +265,7 @@
 
     @keyframes floatCard {
       50% {
-        transform: rotateY(8deg) rotateX(2deg) translateY(-18px)
+        transform: rotateY(8deg) rotateX(2deg) translateY(-18px);
       }
     }
 
@@ -279,31 +273,10 @@
       width: 100%;
       border-radius: 34px;
       display: block;
-      box-shadow: 0 22px 55px rgba(255, 138, 0, .25)
+      box-shadow: 0 22px 55px rgba(255, 138, 0, .25);
     }
 
-    .chat-bubble {
-      position: absolute;
-      right: 20px;
-      top: 92px;
-      width: 230px;
-      background: #fff;
-      padding: 18px;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      font-weight: 900;
-      animation: wiggle 4s ease-in-out infinite;
-    }
-
-    .chat-bubble:after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 32px;
-      border: 12px solid transparent;
-      border-top-color: #fff
-    }
-
+    .chat-bubble,
     .mini {
       position: absolute;
       background: #fff;
@@ -311,50 +284,303 @@
       padding: 14px 16px;
       box-shadow: var(--shadow);
       font-weight: 900;
-      animation: bob 3.8s ease-in-out infinite
+    }
+
+    .chat-bubble {
+      right: 20px;
+      top: 92px;
+      width: 230px;
+      padding: 18px;
+      border-radius: 24px;
     }
 
     .m1 {
       left: 10px;
-      bottom: 130px
+      bottom: 130px;
     }
 
     .m2 {
       right: 18px;
       bottom: 45px;
-      animation-delay: 1s
     }
 
     .m3 {
       left: 60px;
       top: 70px;
-      animation-delay: 2s
     }
 
-    @keyframes bob {
+    h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1;
+      margin: 0 0 16px;
+      letter-spacing: -2px;
+      text-align: center;
+    }
+
+    .section-lead {
+      text-align: center;
+      color: var(--muted);
+      font-size: 19px;
+      max-width: 760px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+
+    .try-section {
+      margin-top: 80px;
+      margin-bottom: 100px;
+    }
+
+    .try-layout {
+      max-width: 980px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 28px;
+      align-items: center;
+      padding: 26px;
+      border-radius: 42px;
+      background: rgba(255, 255, 255, .55);
+      border: 1px solid rgba(255, 255, 255, .85);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .lumiee-demo-art {
+      min-height: 520px;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 30% 20%, #fff0a8, transparent 28%),
+        radial-gradient(circle at 80% 70%, #b7ecff, transparent 30%),
+        linear-gradient(135deg, #fff7d7, #fff);
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lumiee-demo-art img {
+      width: min(340px, 88%);
+      display: block;
+      filter: drop-shadow(0 25px 35px rgba(22, 119, 255, .2));
+      animation: botFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes botFloat {
       50% {
-        transform: translateY(-15px)
+        transform: translateY(-14px);
       }
     }
 
-    @keyframes wiggle {
-      50% {
-        transform: rotate(2deg) translateY(-10px)
-      }
+    .demo-pill {
+      position: absolute;
+      left: 26px;
+      background: white;
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 900;
+      color: #38506f;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
     }
 
-    @keyframes pop {
-      from {
-        opacity: 0;
-        transform: translateY(12px)
-      }
+    .pill-one {
+      top: 70px;
+    }
+
+    .pill-two {
+      top: 125px;
+    }
+
+    .pill-three {
+      top: 180px;
+    }
+
+    .chat-wrapper {
+      background: #ffffff;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: 0 24px 55px rgba(23, 32, 51, .14);
+      border: 1px solid #eef3ff;
+    }
+
+    .chat-topbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, #172033, #263b6f);
+      color: white;
+    }
+
+    .chat-avatar img {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      object-fit: cover;
+      background: white;
+      padding: 4px;
+    }
+
+    .chat-title {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .chat-status {
+      font-size: 13px;
+      opacity: .9;
+      margin-top: 2px;
+    }
+
+    .chat-box {
+      height: 420px;
+      overflow-y: auto;
+      padding: 20px;
+      background:
+        radial-gradient(circle at 15% 10%, #fff6c9, transparent 28%),
+        linear-gradient(180deg, #ffffff, #f8fbff);
+      scroll-behavior: smooth;
+    }
+
+    .chat-box::-webkit-scrollbar {
+      width: 9px;
+    }
+
+    .chat-box::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #ff8a00, #ff4da6);
+      border-radius: 999px;
+    }
+
+    .welcome-card {
+      background: white;
+      padding: 18px;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
+    }
+
+    .welcome-card h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .welcome-card p {
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    .chat-input-area {
+      display: flex;
+      gap: 12px;
+      padding: 16px;
+      background: #fff;
+      border-top: 1px solid #eef3ff;
+    }
+
+    .chat-input-area input {
+      flex: 1;
+      border: 1px solid #dce4f2;
+      border-radius: 16px;
+      padding: 15px 16px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .chat-input-area input:focus {
+      border-color: #ff4da6;
+      box-shadow: 0 0 0 4px rgba(255, 77, 166, .12);
+    }
+
+    .chat-send-btn {
+      border: none;
+      border-radius: 16px;
+      padding: 0 24px;
+      font-weight: 900;
+      color: white;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ff8a00, #ff4da6);
+      transition: .25s;
+    }
+
+    .chat-send-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .user-msg {
+      max-width: 80%;
+      margin: 12px 0 12px auto;
+      background: linear-gradient(135deg, #1677ff, #36d7ff);
+      color: white;
+      padding: 12px 15px;
+      border-radius: 18px 18px 4px 18px;
+      font-weight: 700;
+    }
+
+    .bot-msg {
+      max-width: 86%;
+      margin: 12px auto 12px 0;
+      background: white;
+      color: var(--ink);
+      padding: 12px 15px;
+      border-radius: 18px 18px 18px 4px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+    }
+
+    .result-card {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: white;
+      border-radius: 18px;
+      padding: 12px;
+      margin: 12px 0;
+      cursor: pointer;
+      border: 1px solid #edf1f8;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+      transition: .25s;
+    }
+
+    .result-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, .12);
+    }
+
+    .result-card img {
+      width: 74px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 14px;
+      background: #f3f6fb;
+    }
+
+    .result-title {
+      font-weight: 900;
+      font-size: 17px;
+      color: #172033;
+      margin-bottom: 6px;
+    }
+
+    .result-type {
+      font-size: 13px;
+      color: #64708a;
+      text-transform: capitalize;
+    }
+
+    .result-chip {
+      margin-top: 8px;
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff8a00, #ff4da6);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
-      margin: 40px 0 80px
+      margin: 40px 0 80px;
     }
 
     .card {
@@ -365,13 +591,11 @@
       box-shadow: 0 18px 45px rgba(23, 32, 51, .08);
       backdrop-filter: blur(14px);
       transition: .25s transform, .25s box-shadow;
-      position: relative;
-      overflow: hidden
     }
 
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: var(--shadow)
+      box-shadow: var(--shadow);
     }
 
     .icon {
@@ -381,40 +605,23 @@
       display: grid;
       place-items: center;
       font-size: 28px;
-      background: linear-gradient(135deg, #fff2b8, #ffd1e7)
-    }
-
-    h2 {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1;
-      margin: 0 0 16px;
-      letter-spacing: -2px;
-      text-align: center
-    }
-
-    .section-lead {
-      text-align: center;
-      color: var(--muted);
-      font-size: 19px;
-      max-width: 760px;
-      margin: 0 auto 28px;
-      line-height: 1.6
+      background: linear-gradient(135deg, #fff2b8, #ffd1e7);
     }
 
     h3 {
       font-size: 23px;
-      margin: 18px 0 10px
+      margin: 18px 0 10px;
     }
 
     p {
       color: var(--muted);
-      line-height: 1.65
+      line-height: 1.65;
     }
 
     ul {
       padding-left: 20px;
       color: #56627b;
-      line-height: 1.9
+      line-height: 1.9;
     }
 
     .feature-band {
@@ -428,18 +635,16 @@
       color: white;
       box-shadow: var(--shadow);
       margin-bottom: 80px;
-      overflow: hidden;
-      position: relative
     }
 
     .feature-band p,
     .feature-band li {
-      color: #d9e6ff
+      color: #d9e6ff;
     }
 
     .feature-band h2 {
       text-align: left;
-      color: white
+      color: white;
     }
 
     .safety {
@@ -447,21 +652,21 @@
       border-radius: 42px;
       padding: 46px;
       box-shadow: var(--shadow);
-      margin-bottom: 80px
+      margin-bottom: 80px;
     }
 
     .timeline {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
-      margin-top: 30px
+      margin-top: 30px;
     }
 
     .step {
       background: #fff;
       border-radius: 26px;
       padding: 22px;
-      border: 1px solid #eef3ff
+      border: 1px solid #eef3ff;
     }
 
     .num {
@@ -472,7 +677,7 @@
       color: white;
       display: grid;
       place-items: center;
-      font-weight: 900
+      font-weight: 900;
     }
 
     .download {
@@ -483,50 +688,124 @@
       background: linear-gradient(135deg, #ff8a00, #ff4da6 50%, #1677ff);
       color: white;
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden
     }
 
     .download h2,
     .download p {
-      color: white
+      color: white;
     }
 
-    .download .btn {
-      min-width: 210px
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .store-btn {
+      width: 245px;
+      min-height: 76px;
+      background: #101010;
+      color: white;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .22);
+      transition: .25s ease;
+      border: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .store-btn:hover {
+      transform: translateY(-5px) scale(1.03);
+    }
+
+    .expo-btn {
+      background: linear-gradient(135deg, #111827, #2563eb);
+    }
+
+    .store-icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .store-btn small {
+      display: block;
+      font-size: 12px;
+      opacity: .78;
+      text-align: left;
+    }
+
+    .store-btn strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1.15;
+      text-align: left;
+    }
+
+    .qr-box {
+      margin: 34px auto 0;
+      background: rgba(255, 255, 255, .18);
+      border: 1px solid rgba(255, 255, 255, .35);
+      width: 300px;
+      padding: 18px;
+      border-radius: 22px;
+      backdrop-filter: blur(12px);
+    }
+
+    .qr-box p {
+      color: white;
+      font-weight: 900;
+      margin: 0 0 10px;
+      font-size: 15px;
+    }
+
+    .qr-box img {
+      width: 190px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 14px;
+      background: white;
+      padding: 7px;
     }
 
     footer {
       text-align: center;
       color: #6a748b;
-      padding: 40px 0 55px
+      padding: 40px 0 55px;
     }
 
     .reveal {
       opacity: 0;
       transform: translateY(32px);
-      transition: .8s ease
+      transition: .8s ease;
     }
 
     .reveal.show {
       opacity: 1;
-      transform: none
+      transform: none;
     }
 
     @media(max-width:900px) {
 
       .hero,
-      .feature-band {
-        grid-template-columns: 1fr
+      .feature-band,
+      .try-layout {
+        grid-template-columns: 1fr;
       }
 
       .grid,
       .timeline {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
 
       .navlinks {
-        display: flex;
         position: absolute;
         top: 92px;
         left: 20px;
@@ -547,126 +826,23 @@
 
       .chat-bubble,
       .mini {
-        display: none
+        display: none;
       }
 
-      .store-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-top: 25px;
+      .lumiee-demo-art {
+        min-height: 360px;
       }
 
-      .store-btn {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        background: black;
-        color: white;
-        padding: 14px 20px;
-        border-radius: 16px;
-        text-decoration: none;
-        font-weight: 700;
-        min-width: 200px;
-        transition: 0.3s;
+      .chat-box {
+        height: 430px;
       }
 
-      .store-btn small {
-        font-size: 11px;
-        opacity: 0.7;
+      .chat-input-area {
+        flex-direction: column;
       }
 
-      .store-btn div div {
-        font-size: 18px;
-        font-weight: 900;
-      }
-
-      .store-btn .icon {
-        font-size: 24px;
-      }
-
-      .store-btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      }
-
-      .android {
-        background: #34a853;
-      }
-
-      .ios {
-        background: #000;
-      }
-
-      .store-buttons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 22px;
-        flex-wrap: wrap;
-        margin-top: 34px;
-      }
-
-      .store-btn {
-        width: 230px;
-        height: 76px;
-        background: #111;
-        color: white;
-        border-radius: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 14px;
-        box-shadow: 0 18px 40px rgba(0, 0, 0, .22);
-        transition: .25s ease;
-      }
-
-      .store-btn:hover {
-        transform: translateY(-5px) scale(1.03);
-      }
-
-      .store-icon {
-        font-size: 34px;
-        line-height: 1;
-      }
-
-      .store-btn small {
-        display: block;
-        font-size: 12px;
-        line-height: 1;
-        opacity: .8;
-      }
-
-      .store-btn strong {
-        display: block;
-        font-size: 22px;
-        line-height: 1.15;
-      }
-
-      .qr-box {
-        margin: 34px auto 0;
-        background: rgba(255, 255, 255, .18);
-        border: 1px solid rgba(255, 255, 255, .35);
-        width: 210px;
-        padding: 16px;
-        border-radius: 24px;
-        backdrop-filter: blur(12px);
-      }
-
-      .qr-box p {
-        color: white;
-        font-weight: 900;
-        margin: 0 0 12px;
-      }
-
-      .qr-box img {
-        width: 150px;
-        display: block;
-        margin: 0 auto;
-        border-radius: 14px;
-        background: white;
-        padding: 8px;
+      .chat-send-btn {
+        height: 54px;
       }
     }
   </style>
@@ -678,7 +854,10 @@
   <div class="bg-orb orb3"></div>
 
   <nav>
-    <a class="brand" href="#"><img src="lumiee-app-icon.jpeg" alt="Lumiee app icon"> Lumiee</a>
+    <a class="brand" href="#">
+      <img src="lumiee-app-icon.jpeg" alt="Lumiee app icon"> Lumiee
+    </a>
+
     <div class="navlinks">
       <a href="#features">Features</a>
       <a href="#safety">Safety</a>
@@ -686,67 +865,127 @@
       <a href="#try">Try Lumiee</a>
       <a href="#download">Download</a>
     </div>
+
     <a class="btn primary" href="#download">Get the App</a>
   </nav>
 
   <section class="hero">
     <div>
       <div class="badge">✨ Safe AI discovery for curious kids</div>
-      <h1>Books & videos your child will <span class="gradient">love learning from.</span></h1>
-      <p class="lead">Lumiee is a friendly AI chatbot that recommends age-appropriate books and videos, helps kids
-        discover new interests, and gives parents powerful safety controls.</p>
+
+      <h1>
+        Books & videos your child will
+        <span class="gradient">love learning from.</span>
+      </h1>
+
+      <p class="lead">
+        Lumiee is a friendly AI chatbot that recommends age-appropriate books and videos,
+        helps kids discover new interests, and gives parents powerful safety controls.
+      </p>
+
       <div class="cta">
-        <a class="btn primary" href="YOUR_IOS_APP_STORE_LINK"> Download for iOS</a>
-        <a class="btn blue" href="YOUR_ANDROID_PLAY_STORE_LINK">▶ Download for Android</a>
+        <button class="btn primary" onclick="showIOSPopup()"> Download for iOS</button>
+
+        <a class="btn blue"
+          href="https://expo.dev/accounts/emmanuelgeor/projects/Lumiee/builds/f78b5a0f-39ea-49ac-ae04-91b4a413934f"
+          target="_blank">
+          ▶ Download for Android
+        </a>
       </div>
-      <div class="trust"><span>🛡️ Parent PIN</span><span>👶 Child Profiles</span><span>📚 Smart Recommendations</span>
+
+      <div class="trust">
+        <span>🛡️ Parent PIN</span>
+        <span>👶 Child Profiles</span>
+        <span>📚 Smart Recommendations</span>
       </div>
     </div>
+
     <div class="phone-stage">
       <div class="halo"></div>
       <div class="chat-bubble">“Hi! Want a fun space book today?”</div>
       <div class="mini m1">📖 Books</div>
       <div class="mini m2">🎬 Videos</div>
       <div class="mini m3">🎙️ Voice chat</div>
-      <div class="app-card"><img src="lumiee-app-icon.jpeg" alt="Lumiee chatbot mascot reading a book"></div>
+
+      <div class="app-card">
+        <img src="lumiee-app-icon.jpeg" alt="Lumiee chatbot mascot reading a book">
+      </div>
     </div>
   </section>
 
-  <section id="try" class="reveal">
+  <section id="try" class="reveal try-section">
     <h2>Try Lumiee AI</h2>
-    <p class="section-lead">Ask Lumiee for books or videos!</p>
 
-    <div id="chatBox"
-      style="max-width:600px;margin:20px auto;background:#fff;padding:20px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);height:300px;overflow-y:auto;">
-      <div class="bot-msg">Hi! I’m Lumiee 👋 Ask me something like “space books” 🚀</div>
-    </div>
+    <p class="section-lead">
+      Ask Lumiee for books, videos, fun learning topics, animals, space stories, and more.
+    </p>
 
-    <div style="display:flex;justify-content:center;gap:10px;margin-top:15px;">
-      <input id="chatInput" type="text" placeholder="Ask Lumiee..."
-        style="padding:12px;border-radius:10px;border:1px solid #ddd;width:300px;">
-      <button onclick="sendDemoMessage()" class="btn primary">Send</button>
+    <div class="try-layout">
+      <div class="lumiee-demo-art">
+        <div class="demo-pill pill-one">📚 Books</div>
+        <div class="demo-pill pill-two">🎬 Videos</div>
+        <div class="demo-pill pill-three">🧠 Safe AI</div>
+        <img src="lumiee.png" alt="Lumiee robot">
+      </div>
+
+      <div class="chat-wrapper">
+        <div class="chat-topbar">
+          <div class="chat-avatar">
+            <img src="lumiee.png" alt="Lumiee">
+          </div>
+
+          <div>
+            <div class="chat-title">Lumiee Assistant</div>
+            <div class="chat-status">🟢 Online & ready to help</div>
+          </div>
+        </div>
+
+        <div id="chatBox" class="chat-box">
+          <div class="welcome-card">
+            <h3>👋 Hello from Lumiee!</h3>
+
+            <p>
+              Try asking:
+              <br>“space books” 🚀
+              <br>“fun dinosaur videos” 🦖
+              <br>“princess stories” 👑
+            </p>
+          </div>
+        </div>
+
+        <div class="chat-input-area">
+          <input id="chatInput" type="text" placeholder="Ask Lumiee something fun...">
+
+          <button onclick="sendDemoMessage()" class="chat-send-btn">
+            Send ✨
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="download" class="download reveal">
     <h2>Start your child’s safer discovery journey.</h2>
-    <p class="section-lead">Download Lumiee and turn screen time into smart, safe, and joyful learning time.</p>
+
+    <p class="section-lead">
+      Download Lumiee and turn screen time into smart, safe, and joyful learning time.
+    </p>
 
     <div class="store-buttons">
-      <a href="YOUR_IOS_APP_STORE_LINK" class="store-btn">
+      <button onclick="showIOSPopup()" class="store-btn">
         <span class="store-icon"></span>
         <span>
           <small>Download on the</small>
           <strong>App Store</strong>
         </span>
-      </a>
+      </button>
 
-      <a href="https://expo.dev/accounts/emmanuelgeor/projects/Lumiee/builds/8b0d327e-3475-4549-b99d-75210688782a"
-        class="store-btn">
+      <a href="https://expo.dev/accounts/emmanuelgeor/projects/Lumiee/builds/f78b5a0f-39ea-49ac-ae04-91b4a413934f"
+        target="_blank" class="store-btn expo-btn">
         <span class="store-icon">▶</span>
         <span>
           <small>Get it on</small>
-          <strong>Google Play</strong>
+          <strong>Expo</strong>
         </span>
       </a>
     </div>
@@ -759,8 +998,12 @@
 
   <section id="features" class="reveal">
     <h2>Built for wonder. Designed for safety.</h2>
-    <p class="section-lead">A modern learning ecosystem combining AI recommendations, kid-friendly discovery, parental
-      monitoring, and scalable content management.</p>
+
+    <p class="section-lead">
+      A modern learning ecosystem combining AI recommendations, kid-friendly discovery,
+      parental monitoring, and scalable content management.
+    </p>
+
     <div class="grid">
       <div class="card">
         <div class="icon">🧠</div>
@@ -768,28 +1011,33 @@
         <p>Personalized book and video suggestions based on each child’s age, interests, history, and learning sessions.
         </p>
       </div>
+
       <div class="card">
         <div class="icon">💬</div>
         <h3>Chat with Lumiee</h3>
         <p>A friendly context-aware assistant that helps children ask questions, explore topics, and find safe content.
         </p>
       </div>
+
       <div class="card">
         <div class="icon">👶</div>
         <h3>Child Profiles</h3>
         <p>Create individual profiles with preferences, favorites, viewing history, and personalized feeds for every
           child.</p>
       </div>
+
       <div class="card">
         <div class="icon">🎙️</div>
         <h3>Voice-to-Text</h3>
         <p>Younger users can speak naturally to Lumiee, making discovery easier, faster, and more accessible.</p>
       </div>
+
       <div class="card">
         <div class="icon">⭐</div>
         <h3>Favorites & Reviews</h3>
         <p>Kids can like, dislike, save favorites, rate content, and share feedback to improve recommendations.</p>
       </div>
+
       <div class="card">
         <div class="icon">⚡</div>
         <h3>Fast Sync</h3>
@@ -801,8 +1049,12 @@
   <section id="safety" class="feature-band reveal">
     <div>
       <h2>Real-time safety monitoring parents can trust.</h2>
-      <p>Lumiee detects unsafe searches, flags harmful keywords, logs alerts, and sends parent notifications with safer
-        alternatives and helpful parenting suggestions.</p>
+
+      <p>
+        Lumiee detects unsafe searches, flags harmful keywords, logs alerts,
+        and sends parent notifications with safer alternatives and helpful parenting suggestions.
+      </p>
+
       <ul>
         <li>Parent PIN protection and separate Parent Mode</li>
         <li>Unsafe keyword detection and alert dashboard</li>
@@ -810,6 +1062,7 @@
         <li>Admin-managed moderation and content reporting</li>
       </ul>
     </div>
+
     <div class="card">
       <div class="icon">🛡️</div>
       <h3>Safety Dashboard</h3>
@@ -820,24 +1073,30 @@
 
   <section id="parents" class="safety reveal">
     <h2>Simple for kids. Powerful for parents.</h2>
-    <p class="section-lead">Lumiee gives families a balanced experience: playful discovery for children and strong
-      oversight for parents.</p>
+
+    <p class="section-lead">
+      Lumiee gives families a balanced experience: playful discovery for children and strong oversight for parents.
+    </p>
+
     <div class="timeline">
       <div class="step">
         <div class="num">1</div>
         <h3>Create Profiles</h3>
         <p>Add each child’s name, age, and interests.</p>
       </div>
+
       <div class="step">
         <div class="num">2</div>
         <h3>Explore Safely</h3>
         <p>Kids chat, search, save, and discover.</p>
       </div>
+
       <div class="step">
         <div class="num">3</div>
         <h3>Monitor Alerts</h3>
         <p>Parents receive logs and notifications.</p>
       </div>
+
       <div class="step">
         <div class="num">4</div>
         <h3>Improve Learning</h3>
@@ -848,32 +1107,38 @@
 
   <section class="reveal">
     <h2>Everything your app needs to grow.</h2>
+
     <div class="grid">
       <div class="card">
         <div class="icon">📚</div>
         <h3>Content Management</h3>
         <p>Firestore content storage, categories, tags, metadata, filtering, and admin moderation.</p>
       </div>
+
       <div class="card">
         <div class="icon">🚩</div>
         <h3>Reporting Workflow</h3>
         <p>Parents can report content with reasons while admins review details, likes, dislikes, and actions.</p>
       </div>
+
       <div class="card">
         <div class="icon">❓</div>
         <h3>Support System</h3>
         <p>FAQ, Contact Us, Report a Problem, admin answers, and pending-to-resolved status tracking.</p>
       </div>
+
       <div class="card">
         <div class="icon">💳</div>
         <h3>Subscriptions</h3>
         <p>7-day free trial, monthly plan, yearly discounted plan, and onboarding plan selection.</p>
       </div>
+
       <div class="card">
         <div class="icon">🔐</div>
         <h3>Secure Accounts</h3>
         <p>Firebase Auth, user-specific data isolation, and admin-only access for sensitive collections.</p>
       </div>
+
       <div class="card">
         <div class="icon">⚙️</div>
         <h3>Clean Settings</h3>
@@ -882,14 +1147,16 @@
     </div>
   </section>
 
-
-
-
   <footer>© <span id="year"></span> Lumiee. Safe AI-powered learning for kids.</footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    const CHAT_DEMO_URL = "https://chat-demo-45t5zbvv3q-as.a.run.app";
+
+    function showIOSPopup() {
+      alert("App development for iOS is ongoing. Please check back soon!");
+    }
+
+    const CHAT_DEMO_URL = "https://chat-demo-45t5zbvv3q-as.a.run.app/chat";
 
     async function sendDemoMessage() {
       const input = document.getElementById("chatInput");
@@ -898,48 +1165,116 @@
       const message = input.value.trim();
       if (!message) return;
 
-      chatBox.innerHTML += `<div style="text-align:right;margin:10px 0;"><b>You:</b> ${message}</div>`;
-      input.value = "";
-
-      const res = await fetch(CHAT_DEMO_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          message,
-          mode: "either"
-        })
-      });
-
-      const data = await res.json();
-
       chatBox.innerHTML += `
-    <div style="margin:10px 0;"><b>Lumiee:</b> ${data.reply}</div>
-  `;
-
-      if (data.recommendations) {
-        data.recommendations.forEach(item => {
-          chatBox.innerHTML += `
-        <div style="background:#f9f9f9;padding:10px;border-radius:10px;margin:8px 0;">
-          📌 <b>${item.title}</b>
+        <div class="user-msg">
+          ${message}
         </div>
       `;
+
+      input.value = "";
+
+      try {
+        const res = await fetch(CHAT_DEMO_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            message,
+            mode: "either",
+            parentId: "demo",
+            childId: 0,
+            sessionId: "demo-session"
+          })
+        });
+
+        const data = await res.json();
+
+        chatBox.innerHTML += `
+          <div class="bot-msg">
+            <b>Lumiee:</b> ${data.reply}
+          </div>
+        `;
+
+        if (data.recommendations && data.recommendations.length > 0) {
+          data.recommendations.forEach(item => {
+            const thumbnail =
+              item.thumbnail ||
+              item.thumbnailUrl ||
+              item.image ||
+              item.coverURL ||
+              "lumiee.png";
+
+            chatBox.innerHTML += `
+              <div onclick="openDownloadPopup()" class="result-card">
+                <img src="${thumbnail}" alt="${item.title || 'Lumiee content'}">
+
+                <div style="flex:1;">
+                  <div class="result-title">
+                    ${item.title || "Untitled"}
+                  </div>
+
+                  <div class="result-type">
+                    ${item.type || "content"}
+                  </div>
+
+                  <div class="result-chip">
+                    Tap to enjoy ✨
+                  </div>
+                </div>
+              </div>
+            `;
+          });
+        }
+
+        chatBox.scrollTo({
+          top: chatBox.scrollHeight,
+          behavior: "smooth"
+        });
+
+      } catch (err) {
+        console.log(err);
+
+        chatBox.innerHTML += `
+          <div class="bot-msg" style="color:red;">
+            Something went wrong. Please try again.
+          </div>
+        `;
+      }
+    }
+
+    function openDownloadPopup() {
+      const confirmed = confirm(
+        "✨ In order to enjoy Lumiee content, please download the Lumiee app and continue your safe learning journey!"
+      );
+
+      if (confirmed) {
+        document.getElementById("download").scrollIntoView({
+          behavior: "smooth"
         });
       }
-
-      chatBox.scrollTop = chatBox.scrollHeight;
     }
+
     const reveals = document.querySelectorAll(".reveal");
+
     const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("show"); });
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("show");
+      });
     }, { threshold: .12 });
+
     reveals.forEach(el => io.observe(el));
 
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener("click", e => {
         const target = document.querySelector(a.getAttribute("href"));
-        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth" }); }
+
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: "smooth"
+          });
+        }
       });
     });
   </script>
